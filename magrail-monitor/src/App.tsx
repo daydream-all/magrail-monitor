@@ -46,7 +46,7 @@ const pieData = [
 function FluxLogo() {
   return (
     <div className="brand">
-      <img className="brand-image" src="/fluxloop-logo.jpg" alt="FluxLoop ??????????? logo" />
+      <img className="brand-image" src={`${import.meta.env.BASE_URL}fluxloop-logo.jpg`} alt="FluxLoop logo" />
     </div>
   );
 }
