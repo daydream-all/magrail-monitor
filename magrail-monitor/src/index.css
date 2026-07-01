@@ -1,72 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  --bg-primary: #0a0e17;
-  --bg-secondary: #111827;
-  --bg-surface: #1a1f2e;
-  --bg-card: #1e2433;
-  --bg-hover: #252d3d;
-  --border: #2a3344;
-  --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #00d4ff;
-  --accent-dim: rgba(0, 212, 255, 0.15);
-  --accent-glow: rgba(0, 212, 255, 0.3);
-  --purple: #8b5cf6;
-  --purple-dim: rgba(139, 92, 246, 0.15);
-  --green: #10b981;
-  --green-dim: rgba(16, 185, 129, 0.15);
-  --amber: #f59e0b;
-  --amber-dim: rgba(245, 158, 11, 0.15);
-  --red: #ef4444;
-  --red-dim: rgba(239, 68, 68, 0.15);
-  --sidebar-width: 240px;
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  color: #eaf8ff;
+  background: #03070d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  overflow: hidden;
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+body {
+  min-width: 320px;
+  background: #03070d;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
-  50% { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(0, 212, 255, 0.1); }
-}
-
-@keyframes float-line {
-  0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -20; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
