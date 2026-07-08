@@ -526,6 +526,23 @@
   fill: rgba(20, 35, 48, 0.45);
 }
 
+.tube-core {
+  opacity: 0.9;
+}
+
+.tube-shine {
+  fill: none;
+  stroke: rgba(214, 247, 255, 0.42) !important;
+  stroke-width: 3 !important;
+  stroke-linecap: round;
+  opacity: 0.82;
+}
+
+.lower-shine {
+  stroke: rgba(144, 220, 255, 0.24) !important;
+  opacity: 0.58;
+}
+
 .tube path:not(.car-body):not(.car-window):not(.car-nose):not(.car-side):not(.car-roof):not(.car-shadow):not(.car-glass-cut):not(.levitation-wave) {
   fill: none;
   stroke: rgba(172, 228, 255, 0.42);
@@ -547,6 +564,31 @@
 .rail-line.lower {
   stroke-width: 4 !important;
   opacity: 0.55;
+}
+
+.energy-stream {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 10 16;
+  filter: url(#orangeGlow);
+  animation: dash 1.6s linear infinite, coilPulse 1.6s ease-in-out infinite;
+}
+
+.energy-stream.primary {
+  stroke: rgba(255, 161, 50, 0.92) !important;
+  stroke-width: 4 !important;
+}
+
+.energy-stream.secondary {
+  stroke: rgba(66, 206, 255, 0.72) !important;
+  stroke-width: 3 !important;
+  animation-duration: 2.1s;
+}
+
+.energy-stream.tertiary {
+  stroke: rgba(74, 245, 112, 0.7) !important;
+  stroke-width: 2.5px !important;
+  animation-duration: 2.6s;
 }
 
 .blue-ring ellipse {
@@ -597,8 +639,7 @@
 }
 
 .car-body {
-  fill: url(#carBodyFallback);
-  fill: #eaf2f8;
+  fill: url(#carShell);
   stroke: #111820;
   stroke-width: 3;
 }
@@ -676,6 +717,7 @@
 .callout rect {
   fill: rgba(2, 14, 26, 0.78);
   stroke: rgba(82, 193, 255, 0.55);
+  backdrop-filter: blur(8px);
 }
 
 .callout text {
@@ -916,6 +958,8 @@
   text-align: left;
   cursor: pointer;
   color: inherit;
+  position: relative;
+  overflow: hidden;
 }
 
 .tech-card h3 {
@@ -940,6 +984,36 @@
   margin-top: 10px;
   color: #ffbd5c;
   font-size: 12px;
+}
+
+.tech-points {
+  margin-top: 10px;
+}
+
+.tech-signal {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 16px currentColor;
+  animation: segmentPulse 1.35s ease-in-out infinite;
+}
+
+.tech-signal.cyan {
+  background: #26d7c4;
+  color: #26d7c4;
+}
+
+.tech-signal.blue {
+  background: #2db4ff;
+  color: #2db4ff;
+}
+
+.tech-signal.amber {
+  background: #ffae42;
+  color: #ffae42;
 }
 
 .info-section {
